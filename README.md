@@ -1,4 +1,4 @@
-# ÖTV'siz Araç Fiyatı
+# ÖTV'siz Araç Fiyatı Hesaplama
 
 Sıfır araç alımlarında ÖTV muafiyetinden yararlanıldığında son fiyatı hesaplayan web projesi.
 
