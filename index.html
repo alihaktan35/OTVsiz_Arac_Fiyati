@@ -12,15 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-        <script>
-            function hesapla()
-            {
-                document.getElementById("text").innerHTML="Aracın ÖTV muafiyetli fiyatı:"
-                var sonfiyat = Number(document.getElementById("liste").value) / 1.18 / 1.80 * 1.18;
-                sonfiyat = ~~sonfiyat; //Virgülden sonrasını göstermemek için
-                document.getElementById("sonuc").innerHTML=sonfiyat + " ₺"; //TL sembolünü ekledik
-            }
-        </script>
+        <script src="/app.js"></script> <!--JS dosyamızı bağladık-->
     </head>
     <body>
         <div class="main">
