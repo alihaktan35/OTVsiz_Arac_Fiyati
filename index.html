@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ÖTV'siz Araç Fiyatı Hesaplama</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Sıfır araç alımlarında ÖTV muafiyetinden yararlanıldığında son fiyatı hesaplayan web projesi">
+        <meta name="keywords" content="ÖTV,muafiyet,araç,otomobil,ötv'siz araç,fiyat">
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/styles.css">
+        <!--Google Fonts üzerinden Montserrat'ı çektik.-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <script>
+            function hesapla()
+            {
+                document.getElementById("text").innerHTML="Aracın ÖTV muafiyetli fiyatı:"
+                var sonfiyat = Number(document.getElementById("liste").value) / 1.18 / 1.80 * 1.18;
+                sonfiyat = ~~sonfiyat; //Virgülden sonrasını göstermemek için
+                document.getElementById("sonuc").innerHTML=sonfiyat + " ₺"; //TL sembolünü ekledik
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <h2>ÖTV'siz Araç Fiyatı Hesaplama</h2>
+            <p>Sıfır araç alımlarında ÖTV muafiyetinden yararlanıldığında son fiyatı hesaplayan web projesi</p>
+            Aracın tüm vergiler dahil liste fiyatını giriniz: <br> <br>
+            <input type="number" id="liste" value="0" step="10000" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==7) return false;">
+            <input type="button" value="Hesapla" onclick="hesapla()">
+            <div class="sonuc">
+                <p id="text"></p>
+                <p id="sonuc"></p>
+            </div>
+        </div>
+        <footer><a href="https://ahstr.me/"> ©2022 - AHSTR</a></footer>
+    </body>
+</html>
